@@ -1,0 +1,89 @@
+package inheritance;
+
+import java.util.Scanner;
+
+public class calculator {
+	public int add(int num1,int num2) {
+		return num1+num2;
+	}
+	public double add(double num1,double num2)
+	{
+		return num1+num2;
+	}
+	public double add(int num1,double num2)
+	{
+		return num1+num2;
+	}
+	public double add(double num1,int num2)
+	{
+		return num1+num2;
+	}
+	
+	public int diff(int num1,int num2)
+	{
+		return num1-num2;
+	}
+	public double diff(double num1,double num2)
+	{
+		return num1-num2;
+	}
+	public double diff(int num1,double num2)
+	{
+		return num1-num2;
+	}
+	public double diff(double num1,int num2)
+	{
+		return num1-num2;
+	}
+	public int mul(int num1,int num2)
+	{
+		return num1*num2;
+	}
+	public double mul(double num1,double num2)
+	{
+		return num1*num2;
+	}
+	public double mul(int num1,double num2)
+	{
+		return num1*num2;
+	}
+	public double mul(double num1,int num2)
+	{
+		return num1*num2;
+	}
+	public int div(int num1,int num2)
+	{
+		return num1/num2;
+	}
+	public double div(double num1,double num2)
+	{
+		return num1/num2;
+	}
+	public double div(int num1,double num2)
+	{
+		return num1/num2;
+	}
+	public double div(double num1,int num2)
+	{
+		return num1/num2;
+	}
+	
+	
+	
+	public static void main(String args[])
+	{
+		calculator cal=new calculator();
+		
+		
+		double a=cal.add(10.0,30.0);
+		System.out.println("value is: "+a);
+		double b=cal.diff(20,30.0);
+		System.out.println("value is: "+b);
+		double c=cal.mul(25,10.0);
+		System.out.println("value is: "+c);
+		double d=cal.div(20,30.0);
+		System.out.println("value is: "+d);
+		int e=cal.add(2,9);
+		System.out.println("value is: "+e);
+	}
+}
