@@ -1,0 +1,50 @@
+package exceptiondemos;
+
+public class Demo1 {
+	String name;
+	public void display()
+	{
+		try
+		{
+			System.out.println("I AM DEMO DISPLAY");
+			System.out.println("The length is:"+name.length());
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception is there");
+		}
+		System.out.println("try catch block ends");
+	}
+	public void calculate()
+	{
+		try
+		{
+			int i=21/0;
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+	}
+	public void array()
+	{
+		try
+		{
+			int arr[]=new int[3];
+			System.out.println(arr[10]);
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("Wrong");
+		}
+	}
+  public static void main(String args[]) {
+	  System.out.println("HELLO MAIN");
+	  Demo1 d=new Demo1();
+	  d.display();
+	  d.calculate();
+	  d.array();
+	  System.out.println("THANKS AND BYE-BYE MAIN");
+	  
+  }
+}
