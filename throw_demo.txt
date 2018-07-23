@@ -1,0 +1,55 @@
+package exceptiondemos;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class InputDetails {
+	int age=0;
+	public void display()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your age:");
+		try
+		{
+			age=sc.nextInt();
+			if(age<0 || age>120)
+			{
+				throw new InvalidAgeException();
+			}
+                    System.out.println("YOUR AGE IS:"+age);
+			
+		}
+		catch(InputMismatchException e)
+		{
+			System.out.println("please enter correctly");
+		}
+		catch(InvalidAgeException e)
+		{
+			System.out.println("NEGATIVE INPUT NOT ALLOWED");
+		}
+		
+				
+	}
+	public static void main(String args[])
+	{
+		InputDetails det=new InputDetails();
+		det.display();
+		
+	}
+	
+}
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+package exceptiondemos;
+
+public class InvalidAgeException extends RuntimeException{
+	public InvalidAgeException()
+	{
+		
+	}
+	public InvalidAgeException(String message)
+	{
+		super(message);
+	}
+
+}
