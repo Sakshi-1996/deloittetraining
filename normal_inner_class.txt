@@ -1,0 +1,33 @@
+package collectiondemos;
+
+class A
+{
+	String password="hello@sak1996";
+	private class changePassword
+	{
+		int passwordChangedDays=10;
+		public void display()
+		{
+			System.out.println(passwordChangedDays);
+			System.out.println("original password:"+password);
+			password="hello@rish1995";
+			
+		}
+	}
+	
+	public void changePwd()
+	{
+		changePassword p=new changePassword();
+		p.display();
+		System.out.println("Changed Password:"+password);
+	}
+}
+
+public class B {
+
+	public static void main(String[] args) {
+		A a=new A();
+		a.changePwd();
+	}
+
+}
