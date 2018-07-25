@@ -1,0 +1,133 @@
+package collectiondemos;
+
+public class customer {
+	private int customerid;
+	private String name;
+	private String address;
+	private int bill;
+	
+
+	public customer(int customerid, String name, String address, int bill) {
+		super();
+		this.customerid = customerid;
+		this.name = name;
+		this.address = address;
+		this.bill = bill;
+	}
+
+
+	@Override
+	public String toString() {
+		return "customer [customerid=" + customerid + ", name=" + name + ", address=" + address + ", bill=" + bill
+				+ "]";
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + bill;
+		result = prime * result + customerid;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		customer other = (customer) obj;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
+		if (bill != other.bill)
+			return false;
+		if (customerid != other.customerid)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
+
+
+	public int getCustomerid() {
+		return customerid;
+	}
+
+
+	public void setCustomerid(int customerid) {
+		this.customerid = customerid;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+
+	public int getBill() {
+		return bill;
+	}
+
+
+	public void setBill(int bill) {
+		this.bill = bill;
+	}
+
+
+
+
+}
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+package collectiondemos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class customerMain {
+    public static void main(String[] args) {
+		
+       List<customer> allcustomers=new ArrayList<customer>();
+       customer c1=new customer(10,"Uma","Pune",76000);
+       allcustomers.add(c1);
+       allcustomers.add(new customer(11,"anu","agra",98000));
+       allcustomers.add(new customer(12,"saksh","ranchi",78000));
+       allcustomers.add(new customer(13,"rish","bareily",96000));
+       System.out.println("printing details:");
+       for(customer cus:allcustomers)
+       {
+    	   System.out.println(cus);
+       }
+       
+    }
+
+
+}
